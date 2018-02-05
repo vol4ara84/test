@@ -7,4 +7,5 @@ def repeat(s, exclaim):
 def main():
     print(repeat('wolo', True))
     print(repeat('yah', False))
-
+    if __name__ == '__main__':
+         main()
