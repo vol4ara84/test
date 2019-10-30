@@ -1,0 +1,7 @@
+var open:Bool=false
+if open {
+    print("open")
+}
+else {
+    print("close")
+}
