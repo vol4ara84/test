@@ -1,0 +1,7 @@
+var a=23
+var b=33
+var c=11
+var tstring:String=""
+var m=[a, b, c]
+let temp=m.max()
+tstring="Highest \(temp)"
