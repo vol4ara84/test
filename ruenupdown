@@ -1,0 +1,23 @@
+import Foundation
+
+let lang = "en"
+let char = "down"
+var days: [String]
+switch lang {
+case "ru":
+    if char == "up"{
+        days = ["ПН","ВТ"]
+    }else if char == "down" {
+        days = ["пн","вт"]
+    }
+    
+case "en":
+    if char == "up" {
+        days = ["MON", "TUE"]
+    } else if char == "down" {
+        days = ["mon","tue"]
+    }
+    
+default:
+    print("Error")
+}
