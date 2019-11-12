@@ -1,0 +1,20 @@
+var diary: [String: [String: UInt]] = [:]
+var sum: UInt = 0
+var kolvo: Int = 0
+var sred: Double = 0
+var tmparr: [Double] = []
+diary["Dima"] = ["21.01.2019":5, "22.01.2019":5]
+diary["Sveta"] = ["22.01.2019":4, "23.01.2019":4]
+diary["Kolya"] = ["21.01.2019":4, "22.01.2019":5]
+
+
+
+    for (key,value) in diary {
+        for dig in value.values{ //извелкаем оценки
+                sum += dig
+                kolvo += 1
+            }
+    sred = Double(sum)/Double(kolvo)
+        tmparr.append(sred)
+    print(key, sred)
+    }
