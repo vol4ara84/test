@@ -1,0 +1,70 @@
+
+func convert(_ a: Bool) -> String {
+  return String(a)
+}
+var temp: Bool = true
+
+print (convert(temp))
+
+
+func sumArray(_ m: Array<Int>) -> Int {
+    var result = 0
+    for dig in m{
+        if dig > 0 {
+            result += dig
+        }
+    }
+    return result
+}
+
+let DigArray: Array<Int> = [1,-2,3,4,-5]
+
+print(sumArray(DigArray))
+
+//Overloading
+func multi (_ a: Double, _ b: Double) -> Double {
+    return a*b
+}
+
+func multi (_ a: Int,_ b: Int) -> Int {
+    return a*b
+}
+
+multi(4,5)
+multi(4.1,1.1)
+//opposite
+func mirror (_ a: Int) -> Int{
+    return -a
+}
+mirror(7)
+//ArrayCheck
+func check(_ m:[Int],_ b: Int) -> Bool{
+    return m.contains(b)
+}
+let massive = [1,2,3,4,7,8,9]
+check(massive,10)
+//payday
+func payday(_ day:Int) -> Int{
+    switch day{
+    case 1...2:
+        return 850*(day)
+    case 3...7:
+        return 850*(day)-550
+    case 7...:
+        return 850*(day)-1620
+    default:
+        return 0
+    }
+}
+payday(9)
+//repeat
+
+func repeatword(_ a: String,_ c: Int) -> String{
+    var tmp: String = ""
+    for _ in 1...c{
+        tmp += a
+    }
+return tmp
+}
+print(repeatword("Yes",5))
+//
