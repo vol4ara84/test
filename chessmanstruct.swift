@@ -15,10 +15,10 @@ case white
 struct Chessman{ // структура для чесман
     var color :Color = .black
     var type : Type = .bishop
-    var coordinates : (Character, UInt?) = ("?",1)
+    var coordinates : (Character, UInt)?
     var symbol : Character = "?"
     init (color: Color, type: Type){
-        self.coordinates = ("?",nil)
+        self.coordinates = nil
         self.symbol = "?"
     }
     init (color: Color, type : Type, coordnates: (Character,UInt), symbol: Character){
@@ -28,13 +28,13 @@ struct Chessman{ // структура для чесман
         self.symbol
     }
     mutating func type2nil (_: Color, _: Type){ // принимает тип и цвет возвращает пустую координату
-        self.coordinates = ("?",nil)
+        self.coordinates = nil
     }
     mutating func setCoordinates(a: Character, b: UInt) {//
         self.coordinates = (a, b)
         }
     mutating func kill(){
-        self.coordinates = ("?", nil)
+        self.coordinates = nil
     }
     }
 
