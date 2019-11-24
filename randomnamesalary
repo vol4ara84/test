@@ -1,0 +1,22 @@
+class RandomNumberGenerator{
+    let min: Int
+    let max: Int
+    init (min: Int, max: Int){
+        self.min=min
+        self.max=max
+    }
+    func getNumber() -> Int{
+        return Int.random(in: self.min...self.max)
+    }
+}
+struct Employee{
+    var firstName: String?
+    var lastName: String?
+    var salary: Int
+}
+
+let names = ["Alex", "John", "Mark", "Andrey", "Mike"]
+let secondnames = ["Usov", "Hendriks", "Stalone", "Martin"]
+let salary1 = RandomNumberGenerator(min:10000, max: 30000)
+let Employe = Employee(firstName: names.randomElement(), lastName: secondnames.randomElement(), salary:salary1.getNumber())
+print (Employe)
